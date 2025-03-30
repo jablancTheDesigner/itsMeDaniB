@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --env-file=config.local.env index.js"
+    "dev:local": "node --env-file=config.local.env index.js",
+    "dev:prod": "node --env-file=config.env index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
