@@ -1,0 +1,12 @@
+{
+  "name": "puffessional",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
