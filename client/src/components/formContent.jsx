@@ -96,7 +96,7 @@ const FormContent = () => {
                     {successMsg && (
                         <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full flex items-center justify-center">
                             <div className="flex shadow-md gap-6 rounded-lg overflow-hidden max-w-[300px] bg-fuchsia-800 text-gray-800 divide-fuchsia-950">
-                                <div className="flex flex-1 flex-col p-4 border-l-8 dark:border-violet-600">
+                                <div className="flex flex-1 flex-col p-4 border-l-8">
                                     <span className="text-2xl text-gray-50 font-bold leading-tight">Thank you!</span>
                                 </div>
                                 <button className="px-4 flex items-center text-xs uppercase tracking-wide text-gray-50 border-l border-l-fuchsia-950 cursor-pointer bg-fuchsia-950" onClick={() => setSuccessMsg(null)}>Dismiss</button>
