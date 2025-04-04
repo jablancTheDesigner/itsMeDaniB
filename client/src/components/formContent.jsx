@@ -64,7 +64,7 @@ const FormContent = () => {
                             <input className="w-full p-3 rounded bg-white" name="firstName" value={formData.firstName} onChange={(e) => setFormData({
                                 ...formData,
                                 firstName: e.target.value
-                            })} required />
+                            })} required disabled={loading} />
                     </div>
 
                     <div className="mb-2">
@@ -72,7 +72,7 @@ const FormContent = () => {
                         <input className="w-full p-3 rounded bg-white" name="lastName" value={formData.lastName} onChange={(e) => setFormData({
                             ...formData,
                             lastName: e.target.value
-                        })} required />
+                        })} required disabled={loading} />
                     </div>
 
                     <div className="mb-2">
@@ -80,19 +80,19 @@ const FormContent = () => {
                         <input className="w-full p-3 rounded bg-white" name="email" type="email" value={formData.email} onChange={(e) => setFormData({
                             ...formData,
                             email: e.target.value
-                        })} required />
+                        })} required disabled={loading} />
                     </div>
 
-                    <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded  bg-fuchsia-800 text-gray-50 cursor-pointer ">Submit</button>
-                    {loading && (
-                        <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full flex items-center justify-center bg-fuchsia-800">
+                    <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded  bg-fuchsia-800 text-gray-50 cursor-pointer ">
+                        {loading && (
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-4 h-4 rounded-full animate-pulse bg-white"></div>
                                 <div className="w-4 h-4 rounded-full animate-pulse bg-white"></div>
                                 <div className="w-4 h-4 rounded-full animate-pulse bg-white"></div>
                             </div>
-                        </div>
-                    )}
+                        )}
+                        {!loading && <div className="h-4">Submit</div>}
+                    </button>
                     {successMsg && (
                         <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full flex items-center justify-center">
                             <div className="flex shadow-md gap-6 rounded-lg overflow-hidden max-w-[300px] bg-fuchsia-800 text-gray-800 divide-fuchsia-950">
